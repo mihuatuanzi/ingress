@@ -1,0 +1,20 @@
+version: '3.9'
+services:
+  router:
+    hostname: ingress.mihuatuanzi.io
+    image: seanscraft/com.mihuatuanzi.router:latest
+    build:
+      context: .
+      target: router
+    ports:
+      - "80:80"
+      - "8080:8080"
+    networks:
+      - default
+      - backend.mihuatuanzi.io
+    external_links:
+      - backend.ingress.mihuatuanzi.io
+
+networks:
+  backend.mihuatuanzi.io:
+    external: true

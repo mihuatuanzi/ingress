@@ -1,0 +1,12 @@
+entryPoints:
+  web:
+    address: :80
+  websecure:
+    address: :443
+
+providers:
+  file:
+    directory: /etc/traefik/discovery
+
+api:
+  insecure: true

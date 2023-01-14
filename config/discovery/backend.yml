@@ -1,0 +1,14 @@
+http:
+  routers:
+    mihuatuanzi:
+      rule: Host(`localhost`)
+      service: mihuatuanzi-backend
+      entryPoints:
+      - web
+
+  services:
+    mihuatuanzi-backend:
+      loadBalancer:
+        servers:
+        - url: http://backend.ingress.mihuatuanzi.io
+        passHostHeader: false
