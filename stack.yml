@@ -6,15 +6,11 @@ services:
     build:
       context: .
       target: router
+    deploy:
+      update_config:
+        order: start-first
     ports:
       - "80:80"
       - "8080:8080"
     networks:
       - default
-      - backend.mihuatuanzi.io
-    external_links:
-      - backend.ingress.mihuatuanzi.io
-
-networks:
-  backend.mihuatuanzi.io:
-    external: true
