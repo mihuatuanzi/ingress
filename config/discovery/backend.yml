@@ -1,7 +1,7 @@
 http:
   routers:
     mihuatuanzi:
-      rule: Host(`localhost`)
+      rule: Host(`backend.mihuatuanzi.com`)
       service: mihuatuanzi-backend
       entryPoints:
       - web
