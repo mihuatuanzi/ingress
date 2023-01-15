@@ -10,5 +10,5 @@ http:
     mihuatuanzi-backend:
       loadBalancer:
         servers:
-        - url: http://backend.ingress.mihuatuanzi.io
+        - url: http://backend.proxy.mihuatuanzi.io
         passHostHeader: false
